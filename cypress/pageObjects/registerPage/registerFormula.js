@@ -1,3 +1,4 @@
+
 class RegistrationFormula{
     
 //#region Objects
@@ -24,13 +25,24 @@ class RegistrationFormula{
     get confirmPasswordInput(){
         return cy.get("#ConfirmPassword")
     }
+
+    get registerButton(){
+        return cy.get("#register-button")
+    }
+
+    get validationError(){
+        return cy.get(".field-validation-error")
+    }
 //#endregion Objects    
 
 //#region methods
     verifyHeaderText(){
-        this.registerHeader, tresc =>{
-            expect(tresc).to.equal("Register")
-        }
+        this.registerHeader.should("have.text", "Register");
+        
+    }
+
+    verifyErrorText(errorText){
+        this.validationError.should("have.text", errorText);
     }
 
     enterFirstName(name){
@@ -51,6 +63,10 @@ class RegistrationFormula{
 
     enterConfirmPassword(password){
         this.confirmPasswordInput.type(password)
+    }
+
+    pressRegisterButton(){
+        this.registerButton.click();
     }
 
 //#endregion methods

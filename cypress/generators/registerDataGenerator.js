@@ -1,14 +1,16 @@
-const { faker } = require("@faker-js/faker");
-//this generator returns data for registration
+import { faker } from '@faker-js/faker';
+
 class RegisterGenerator{
+
     getRandom(){
-        let firstName = faker.firstName();
-        let lastName = faker.lastName();
-        let email = firstName+"."+lastName+"@mail.com"
-        let password = faker.password();
+       const firstName = faker.name.firstName();
+       const lastName = faker.name.lastName();
+       const email = firstName+"."+lastName+"@mail.com";
+       const password = faker.internet.password();
 
         return {firstName, lastName, email, password}
     }
-}
 
+}
 export default new RegisterGenerator();
+
