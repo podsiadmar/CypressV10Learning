@@ -1,0 +1,23 @@
+{
+  "name": "cypressv10learning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "open": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/podsiadmar/CypressV10Learning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/podsiadmar/CypressV10Learning/issues"
+  },
+  "homepage": "https://github.com/podsiadmar/CypressV10Learning#readme",
+  "dependencies": {
+    "cypress": "^10.4.0"
+  }
+}
